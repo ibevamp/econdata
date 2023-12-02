@@ -1,0 +1,274 @@
+[
+    {
+        "title": "New Home Sales",
+        "country": "USD",
+        "date": "2023-11-27T10:00:00-05:00",
+        "impact": "Medium",
+        "forecast": "724K",
+        "previous": "759K"
+    },
+    {
+        "title": "S&P/CS Composite-20 HPI y/y",
+        "country": "USD",
+        "date": "2023-11-28T09:00:00-05:00",
+        "impact": "Medium",
+        "forecast": "4.0%",
+        "previous": "2.2%"
+    },
+    {
+        "title": "HPI m/m",
+        "country": "USD",
+        "date": "2023-11-28T09:00:00-05:00",
+        "impact": "Low",
+        "forecast": "0.4%",
+        "previous": "0.6%"
+    },
+    {
+        "title": "Richmond Manufacturing Index",
+        "country": "USD",
+        "date": "2023-11-28T09:59:00-05:00",
+        "impact": "Medium",
+        "forecast": "1",
+        "previous": "3"
+    },
+    {
+        "title": "CB Consumer Confidence",
+        "country": "USD",
+        "date": "2023-11-28T10:00:00-05:00",
+        "impact": "High",
+        "forecast": "101.0",
+        "previous": "102.6"
+    },
+    {
+        "title": "FOMC Member Goolsbee Speaks",
+        "country": "USD",
+        "date": "2023-11-28T10:00:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "FOMC Member Waller Speaks",
+        "country": "USD",
+        "date": "2023-11-28T10:05:00-05:00",
+        "impact": "Medium",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "FOMC Member Bowman Speaks",
+        "country": "USD",
+        "date": "2023-11-28T10:45:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "FOMC Member Barr Speaks",
+        "country": "USD",
+        "date": "2023-11-28T13:05:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "FOMC Member Barr Speaks",
+        "country": "USD",
+        "date": "2023-11-28T15:30:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "Prelim GDP q/q",
+        "country": "USD",
+        "date": "2023-11-29T08:30:00-05:00",
+        "impact": "High",
+        "forecast": "5.0%",
+        "previous": "4.9%"
+    },
+    {
+        "title": "Prelim GDP Price Index q/q",
+        "country": "USD",
+        "date": "2023-11-29T08:30:00-05:00",
+        "impact": "Medium",
+        "forecast": "3.5%",
+        "previous": "3.5%"
+    },
+    {
+        "title": "Goods Trade Balance",
+        "country": "USD",
+        "date": "2023-11-29T08:30:00-05:00",
+        "impact": "Low",
+        "forecast": "-86.4B",
+        "previous": "-85.8B"
+    },
+    {
+        "title": "Prelim Wholesale Inventories m/m",
+        "country": "USD",
+        "date": "2023-11-29T08:30:00-05:00",
+        "impact": "Low",
+        "forecast": "0.1%",
+        "previous": "0.0%"
+    },
+    {
+        "title": "Crude Oil Inventories",
+        "country": "USD",
+        "date": "2023-11-29T10:30:00-05:00",
+        "impact": "Low",
+        "forecast": "-0.1M",
+        "previous": "8.7M"
+    },
+    {
+        "title": "Beige Book",
+        "country": "USD",
+        "date": "2023-11-29T14:00:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "Core PCE Price Index m/m",
+        "country": "USD",
+        "date": "2023-11-30T08:30:00-05:00",
+        "impact": "High",
+        "forecast": "0.2%",
+        "previous": "0.3%"
+    },
+    {
+        "title": "Unemployment Claims",
+        "country": "USD",
+        "date": "2023-11-30T08:30:00-05:00",
+        "impact": "High",
+        "forecast": "219K",
+        "previous": "209K"
+    },
+    {
+        "title": "Personal Income m/m",
+        "country": "USD",
+        "date": "2023-11-30T08:30:00-05:00",
+        "impact": "Low",
+        "forecast": "0.2%",
+        "previous": "0.3%"
+    },
+    {
+        "title": "Personal Spending m/m",
+        "country": "USD",
+        "date": "2023-11-30T08:30:00-05:00",
+        "impact": "Low",
+        "forecast": "0.2%",
+        "previous": "0.7%"
+    },
+    {
+        "title": "FOMC Member Williams Speaks",
+        "country": "USD",
+        "date": "2023-11-30T09:15:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "Chicago PMI",
+        "country": "USD",
+        "date": "2023-11-30T09:45:00-05:00",
+        "impact": "Medium",
+        "forecast": "46.0",
+        "previous": "44.0"
+    },
+    {
+        "title": "This is a test: Pending Home Sales m/m",
+        "country": "USD",
+        "date": "2023-11-30T23:32:00-05:00",
+        "impact": "Medium",
+        "forecast": "-1.9%",
+        "previous": "1.1%"
+    },
+    {
+        "title": "Natural Gas Storage",
+        "country": "USD",
+        "date": "2023-11-30T10:30:00-05:00",
+        "impact": "Low",
+        "forecast": "-8B",
+        "previous": "-7B"
+    },
+    {
+        "title": "FOMC Member Barr Speaks",
+        "country": "USD",
+        "date": "2023-12-01T03:00:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "Final Manufacturing PMI",
+        "country": "USD",
+        "date": "2023-12-01T09:45:00-05:00",
+        "impact": "Low",
+        "forecast": "49.4",
+        "previous": "49.4"
+    },
+    {
+        "title": "ISM Manufacturing PMI",
+        "country": "USD",
+        "date": "2023-12-01T10:00:00-05:00",
+        "impact": "High",
+        "forecast": "47.9",
+        "previous": "46.7"
+    },
+    {
+        "title": "ISM Manufacturing Prices",
+        "country": "USD",
+        "date": "2023-12-01T10:00:00-05:00",
+        "impact": "Medium",
+        "forecast": "46.1",
+        "previous": "45.1"
+    },
+    {
+        "title": "Construction Spending m/m",
+        "country": "USD",
+        "date": "2023-12-01T10:00:00-05:00",
+        "impact": "Low",
+        "forecast": "0.4%",
+        "previous": "0.4%"
+    },
+    {
+        "title": "FOMC Member Goolsbee Speaks",
+        "country": "USD",
+        "date": "2023-12-01T19:00:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "Wards Total Vehicle Sales",
+        "country": "USD",
+        "date": "2023-12-01T10:18:00-05:00",
+        "impact": "Low",
+        "forecast": "15.5M",
+        "previous": "15.5M"
+    },
+    {
+        "title": "Fed Chair Powell Speaks",
+        "country": "USD",
+        "date": "2023-12-01T17:00:00-05:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "Fed Chair Powell Speaks",
+        "country": "USD",
+        "date": "2023-12-01T17:00:00-05:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "FOMC Member Cook Speaks",
+        "country": "USD",
+        "date": "2023-12-01T17:00:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": ""
+    }
+]
