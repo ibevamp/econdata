@@ -70,7 +70,7 @@ def main():
         # Print the scheduled jobs
     # print_scheduled_jobs()
     # print_events_for_today(events)
-    print_events_for_week(events)
+    # print_events_for_week(events)
 
     schedule_daily_tasks(events)
     schedule_news(events)
@@ -79,7 +79,7 @@ def main():
         while True:
             schedule.run_pending()
             print(f"Timestamp: {datetime.datetime.now()}")
-            time.sleep(1)  # Adjust the sleep time as needed
+            # time.sleep(1)  # Adjust the sleep time as needed
     except (KeyboardInterrupt, SystemExit):
         pass
         
