@@ -89,14 +89,14 @@ def print_events_for_week(events):
         print(f"{event['title']} at {date}")
 
 def schedule_daily_tasks(events):
-    schedule.every().day.at("19:44").do(send_full, events, "Day")
-    schedule.every().day.at("19:45").do(send_full, events, "Week")
+    schedule.every().day.at("09:30").do(send_full, events, "Day")
+    schedule.every().monday.at("07:00").do(send_full, events, "Week")
 
 def main():
-    # url = "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
+    url = "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
 
-    # if data_needs_update(json_file_path):
-    # fetch_and_save_data(url, json_file_path)
+    if data_needs_update(json_file_path):
+        fetch_and_save_data(url, json_file_path)
 
     events = load_data(json_file_path)
     # send_to_discord(events)
@@ -122,7 +122,7 @@ def main():
         while True:
             schedule.run_pending()
             print(f"Timestamp: {datetime.datetime.now()}")
-            time.sleep(30)  # Adjust the sleep time as needed
+            time.sleep(1)  # Adjust the sleep time as needed
     except (KeyboardInterrupt, SystemExit):
         pass
         

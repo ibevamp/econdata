@@ -1,8 +1,13 @@
 from dateutil import parser
 from datetime import datetime
+from dotenv import load_dotenv
+
+import os
 import datetime
 import requests
 
+load_dotenv()
+VAMP = os.getenv("VAMP")
 #Day suffix ie. Thursday the 5th
 def get_day_suffix(day):
     if 4 <= day <= 20 or 24 <= day <= 30:
@@ -12,7 +17,7 @@ def get_day_suffix(day):
 
 
 def send_single(event):
-    webhook_url = "https://discord.com/api/webhooks/1098304359634321609/ckobatZgO0OJklpkSGTBuxlmonxHLesaEn4zAKeG1e6IhsHZGimkiTRTPmiuTt83YWy9"
+    webhook_url = VAMP
     event_time = parser.parse(event['date'])
     formatted_time = event_time.strftime("%A, %B %d, %Y, at %I:%M %p")
     impact_level = f"Impact Level: **{event['impact']}**"
@@ -49,7 +54,7 @@ def send_single(event):
         print(f"Failed to send notification: {response.status_code}")
     
 def send_full(events, timeframe):
-    webhook_url = "https://discord.com/api/webhooks/1098304359634321609/ckobatZgO0OJklpkSGTBuxlmonxHLesaEn4zAKeG1e6IhsHZGimkiTRTPmiuTt83YWy9"
+    webhook_url = VAMP
 
     now = datetime.datetime.now()
     day = now.day
