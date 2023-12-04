@@ -13,6 +13,17 @@ def convert_to_human_readable(timestamp_str):
     human_readable = dt.strftime("%A, %B %d, %Y, at %I:%M %p")
     return human_readable
 
+#events for day or week
+def events_for(events, timeframe):
+    today = datetime.date.today()
+    if timeframe == "day":
+        todays_events = [event for event in events if parser.parse(event['date']).date() == today]
+        return todays_events
+    else:
+        end_of_week = today + datetime.timedelta(days=7)
+        weeks_events = [event for event in events if today <= parser.parse(event['date']).date() <= end_of_week]
+        return weeks_events
+
 def print_scheduled_jobs():
     print("Scheduled Jobs:")
     for title, datetime_str in scheduled_jobs:

@@ -56,7 +56,7 @@ def schedule_news(events):
             scheduled_jobs.append((event['title'], full_datetime_str))
 
 def schedule_daily_tasks(events):
-    schedule.every().day.at("09:30").do(send_full, events, "Day")
+    schedule.every().day.at("08:00").do(send_full, events, "Day")
     schedule.every().monday.at("07:00").do(send_full, events, "Week")
 
 def main():
@@ -78,7 +78,7 @@ def main():
     try:
         while True:
             schedule.run_pending()
-            print(f"Timestamp: {datetime.datetime.now()}")
+            # print(f"Timestamp: {datetime.datetime.now()}")
             # time.sleep(1)  # Adjust the sleep time as needed
     except (KeyboardInterrupt, SystemExit):
         pass

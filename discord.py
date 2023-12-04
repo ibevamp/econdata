@@ -1,14 +1,19 @@
 from dateutil import parser
 from datetime import datetime
 from dotenv import load_dotenv
+from helper import events_for
 
 import os
 import datetime
 import requests
 
 load_dotenv()
-VAMP = os.getenv("VAMP")
-NWG = os.getenv("NWG")
+
+webhook_urls = {
+    "VAMP": os.getenv("VAMP"),
+    "NWG": os.getenv("NWG")
+    }
+
 #Day suffix ie. Thursday the 5th
 def get_day_suffix(day):
     if 4 <= day <= 20 or 24 <= day <= 30:
@@ -18,7 +23,7 @@ def get_day_suffix(day):
 
 
 def send_single(event):
-    webhook_urls = [VAMP, NWG]
+
     event_time = parser.parse(event['date'])
     formatted_time = event_time.strftime("%A, %B %d, %Y, at %I:%M %p")
     impact_level = f"Impact Level: **{event['impact']}**"
@@ -48,16 +53,14 @@ def send_single(event):
         "attachments": []
     }
     
-    for webhook_url in webhook_urls:
-        response = requests.post(webhook_url, json=payload)
+    for name, value in webhook_urls.items():
+        response = requests.post(value, json=payload)
         if response.status_code == 204:
-            print("Notification sent successfully.")
+            print(f"Notification sent successfully to {name}.")
         else:
-            print(f"Failed to send notification: {response.status_code}")
+            print(f"Failed to send notification to {name}: {response.status_code}")
     
 def send_full(events, timeframe):
-    webhook_url = VAMP
-
     now = datetime.datetime.now()
     day = now.day
     month = now.strftime("%B")
@@ -68,8 +71,10 @@ def send_full(events, timeframe):
 
     if timeframe == "Day":            
         title = f"Events for {date_with_suffix}"
+        events = events_for(events, "day")
     else:
         title = f"Events for Week of {date_with_suffix}"
+        events = events_for(events, "week")
     
     # Create the embed structure
     embed = {
@@ -98,8 +103,10 @@ def send_full(events, timeframe):
         "embeds": [embed],
         "attachments": []
     }
-    response = requests.post(webhook_url, json=payload)
-    if response.status_code == 204:
-        print("Notification sent successfully.")
-    else:
-        print(f"Failed to send notification: {response.status_code}")
+    
+    for name, value in webhook_urls.items():
+        response = requests.post(value, json=payload)
+        if response.status_code == 204:
+            print(f"Notification sent successfully to {name}.")
+        else:
+            print(f"Failed to send notification to {name}: {response.status_code}")
