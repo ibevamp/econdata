@@ -1,6 +1,7 @@
 from dateutil import parser
 from datetime import datetime
 from discord import *
+from helper import *
 
 import requests
 import schedule
@@ -13,16 +14,6 @@ import json
 
 # Path to the local file where JSON data will be saved
 json_file_path = 'events_data.json'
-scheduled_jobs = []  # Global list to store scheduled job details
-
-def convert_to_human_readable(timestamp_str):
-    # Parse the timestamp
-    dt = parser.parse(timestamp_str)
-    
-    # Format to a more human-readable form
-    # Example: "Thursday, November 30, 2023, at 08:30 AM"
-    human_readable = dt.strftime("%A, %B %d, %Y, at %I:%M %p")
-    return human_readable
 
 def fetch_and_save_data(url, file_path):
     response = requests.get(url)
@@ -64,30 +55,6 @@ def schedule_news(events):
             full_datetime_str = reminder_time.strftime("%Y-%m-%d %H:%M")
             scheduled_jobs.append((event['title'], full_datetime_str))
 
-
-def print_scheduled_jobs():
-    print("Scheduled Jobs:")
-    for title, datetime_str in scheduled_jobs:
-        print(f"Event: {title}, Scheduled at: {datetime_str}")
-
-
-def print_events_for_today(events):
-    today = datetime.date.today()
-    todays_events = [event for event in events if parser.parse(event['date']).date() == today]
-    print("Events for Today:")
-    for event in todays_events:
-        date = convert_to_human_readable(event['date'])
-        print(f"{event['title']} at {date}")
-
-def print_events_for_week(events):
-    today = datetime.date.today()
-    end_of_week = today + datetime.timedelta(days=7)
-    weeks_events = [event for event in events if today <= parser.parse(event['date']).date() <= end_of_week]
-    print("Events for the Week:")
-    for event in weeks_events:
-        date = convert_to_human_readable(event['date'])
-        print(f"{event['title']} at {date}")
-
 def schedule_daily_tasks(events):
     schedule.every().day.at("09:30").do(send_full, events, "Day")
     schedule.every().monday.at("07:00").do(send_full, events, "Week")
@@ -100,24 +67,14 @@ def main():
 
     events = load_data(json_file_path)
     # send_to_discord(events)
+        # Print the scheduled jobs
+    # print_scheduled_jobs()
+    # print_events_for_today(events)
+    print_events_for_week(events)
+
     schedule_daily_tasks(events)
     schedule_news(events)
     
-    # # Example usage
-    # event = {
-    #     "title": "New Home Sales",
-    #     "country": "USD",
-    #     "date": "2023-11-27T10:00:00-05:00",
-    #     "impact": "Medium"
-    # }
-    
-    # send_single(event)
-
-    # Print the scheduled jobs
-    # print_scheduled_jobs()
-    # print_events_for_today(events)
-    # print_events_for_week(events)
-    # send_full(events, "Week")
     try:
         while True:
             schedule.run_pending()
@@ -129,3 +86,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # # Example usage
+    # event = {
+    #     "title": "New Home Sales",
+    #     "country": "USD",
+    #     "date": "2023-11-27T10:00:00-05:00",
+    #     "impact": "Medium"
+    # }
+    
+    # send_single(event)
+    # send_full(events, "Week")

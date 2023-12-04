@@ -8,6 +8,7 @@ import requests
 
 load_dotenv()
 VAMP = os.getenv("VAMP")
+NWG = os.getenv("NWG")
 #Day suffix ie. Thursday the 5th
 def get_day_suffix(day):
     if 4 <= day <= 20 or 24 <= day <= 30:
@@ -17,7 +18,7 @@ def get_day_suffix(day):
 
 
 def send_single(event):
-    webhook_url = VAMP
+    webhook_urls = [VAMP, NWG]
     event_time = parser.parse(event['date'])
     formatted_time = event_time.strftime("%A, %B %d, %Y, at %I:%M %p")
     impact_level = f"Impact Level: **{event['impact']}**"
@@ -46,12 +47,13 @@ def send_single(event):
         "embeds": [embed],
         "attachments": []
     }
-
-    response = requests.post(webhook_url, json=payload)
-    if response.status_code == 204:
-        print("Notification sent successfully.")
-    else:
-        print(f"Failed to send notification: {response.status_code}")
+    
+    for webhook_url in webhook_urls:
+        response = requests.post(webhook_url, json=payload)
+        if response.status_code == 204:
+            print("Notification sent successfully.")
+        else:
+            print(f"Failed to send notification: {response.status_code}")
     
 def send_full(events, timeframe):
     webhook_url = VAMP
