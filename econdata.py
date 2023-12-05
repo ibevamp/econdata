@@ -15,7 +15,11 @@ import json
 # Path to the local file where JSON data will be saved
 json_file_path = 'events_data.json'
 
-def fetch_and_save_data(url, file_path):
+def fetch_and_save_data():
+    print("Retreiving data  ... ")
+    url = "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
+    file_path = 'events_data.json'
+    
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
@@ -23,18 +27,14 @@ def fetch_and_save_data(url, file_path):
         usd_events = [event for event in data if event.get('country') == 'USD']
         with open(file_path, 'w') as file:
             json.dump(usd_events, file, indent=4)
+        print("Updated Events JSON")
+        
+    else:
+        print("Error retreiving data")
 
 def load_data(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
-
-def data_needs_update(file_path):
-    # Check if file exists and is updated within the last 24 hours
-    if os.path.exists(file_path):
-        last_modified = datetime.datetime.fromtimestamp(os.path.getmtime(file_path))
-        if (datetime.datetime.now() - last_modified).days < 1:
-            return False
-    return True
 
 def schedule_news(events):
     for event in events:
@@ -56,24 +56,22 @@ def schedule_news(events):
             scheduled_jobs.append((event['title'], full_datetime_str))
 
 def schedule_daily_tasks(events):
+    schedule.every().day.at("00:03").do(fetch_and_save_data)
     schedule.every().day.at("08:00").do(send_full, events, "Day")
     schedule.every().monday.at("07:00").do(send_full, events, "Week")
 
 def main():
-    url = "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
-
-    if data_needs_update(json_file_path):
-        fetch_and_save_data(url, json_file_path)
-
+    
     events = load_data(json_file_path)
     # send_to_discord(events)
         # Print the scheduled jobs
-    # print_scheduled_jobs()
-    # print_events_for_today(events)
+    #print_scheduled_jobs()
+    #print_events_for_today(events)
     # print_events_for_week(events)
 
     schedule_daily_tasks(events)
     schedule_news(events)
+    print_scheduled_jobs()
     
     try:
         while True:

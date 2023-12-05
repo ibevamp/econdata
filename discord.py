@@ -23,7 +23,7 @@ def get_day_suffix(day):
 
 
 def send_single(event):
-
+    print(event)
     event_time = parser.parse(event['date'])
     formatted_time = event_time.strftime("%A, %B %d, %Y, at %I:%M %p")
     impact_level = f"Impact Level: **{event['impact']}**"
