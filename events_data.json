@@ -1,162 +1,210 @@
 [
     {
-        "title": "Factory Orders m/m",
+        "title": "10-y Bond Auction",
         "country": "USD",
-        "date": "2023-12-04T10:00:00-05:00",
-        "impact": "Low",
-        "forecast": "-2.7%",
-        "previous": "2.8%"
-    },
-    {
-        "title": "Final Services PMI",
-        "country": "USD",
-        "date": "2023-12-05T09:45:00-05:00",
-        "impact": "Low",
-        "forecast": "50.8",
-        "previous": "50.8"
-    },
-    {
-        "title": "ISM Services PMI",
-        "country": "USD",
-        "date": "2023-12-05T10:00:00-05:00",
-        "impact": "High",
-        "forecast": "52.2",
-        "previous": "51.8"
-    },
-    {
-        "title": "JOLTS Job Openings",
-        "country": "USD",
-        "date": "2023-12-05T10:00:00-05:00",
-        "impact": "High",
-        "forecast": "9.31M",
-        "previous": "9.55M"
-    },
-    {
-        "title": "RCM/TIPP Economic Optimism",
-        "country": "USD",
-        "date": "2023-12-05T10:09:00-05:00",
-        "impact": "Low",
-        "forecast": "45.2",
-        "previous": "44.5"
-    },
-    {
-        "title": "ADP Non-Farm Employment Change",
-        "country": "USD",
-        "date": "2023-12-06T08:15:00-05:00",
-        "impact": "High",
-        "forecast": "129K",
-        "previous": "113K"
-    },
-    {
-        "title": "Revised Nonfarm Productivity q/q",
-        "country": "USD",
-        "date": "2023-12-06T08:30:00-05:00",
-        "impact": "Low",
-        "forecast": "4.8%",
-        "previous": "4.7%"
-    },
-    {
-        "title": "Revised Unit Labor Costs q/q",
-        "country": "USD",
-        "date": "2023-12-06T08:30:00-05:00",
-        "impact": "Low",
-        "forecast": "-0.9%",
-        "previous": "-0.8%"
-    },
-    {
-        "title": "Trade Balance",
-        "country": "USD",
-        "date": "2023-12-06T08:30:00-05:00",
-        "impact": "Low",
-        "forecast": "-64.1B",
-        "previous": "-61.5B"
-    },
-    {
-        "title": "Crude Oil Inventories",
-        "country": "USD",
-        "date": "2023-12-06T10:30:00-05:00",
-        "impact": "Low",
-        "forecast": "-2.9M",
-        "previous": "1.6M"
-    },
-    {
-        "title": "Challenger Job Cuts y/y",
-        "country": "USD",
-        "date": "2023-12-07T07:30:00-05:00",
-        "impact": "Low",
+        "date": "2023-12-11T13:01:00-05:00",
+        "impact": "Medium",
         "forecast": "",
-        "previous": "8.8%"
+        "previous": "4.52|2.5"
     },
     {
-        "title": "Unemployment Claims",
+        "title": "NFIB Small Business Index",
         "country": "USD",
-        "date": "2023-12-07T08:30:00-05:00",
-        "impact": "High",
-        "forecast": "221K",
-        "previous": "218K"
-    },
-    {
-        "title": "Final Wholesale Inventories m/m",
-        "country": "USD",
-        "date": "2023-12-07T10:00:00-05:00",
+        "date": "2023-12-12T06:00:00-05:00",
         "impact": "Low",
-        "forecast": "-0.2%",
-        "previous": "-0.2%"
+        "forecast": "90.7",
+        "previous": "90.7"
     },
     {
-        "title": "Natural Gas Storage",
+        "title": "Core CPI m/m",
         "country": "USD",
-        "date": "2023-12-07T10:30:00-05:00",
-        "impact": "Low",
-        "forecast": "",
-        "previous": "10B"
-    },
-    {
-        "title": "Consumer Credit m/m",
-        "country": "USD",
-        "date": "2023-12-07T15:00:00-05:00",
-        "impact": "Low",
-        "forecast": "8.1B",
-        "previous": "9.1B"
-    },
-    {
-        "title": "Average Hourly Earnings m/m",
-        "country": "USD",
-        "date": "2023-12-08T08:30:00-05:00",
+        "date": "2023-12-12T08:30:00-05:00",
         "impact": "High",
         "forecast": "0.3%",
         "previous": "0.2%"
     },
     {
-        "title": "Non-Farm Employment Change",
+        "title": "CPI m/m",
         "country": "USD",
-        "date": "2023-12-08T08:30:00-05:00",
+        "date": "2023-12-12T08:30:00-05:00",
         "impact": "High",
-        "forecast": "179K",
-        "previous": "150K"
+        "forecast": "0.0%",
+        "previous": "0.0%"
     },
     {
-        "title": "Unemployment Rate",
+        "title": "CPI y/y",
         "country": "USD",
-        "date": "2023-12-08T08:30:00-05:00",
+        "date": "2023-12-12T08:30:00-05:00",
         "impact": "High",
-        "forecast": "3.9%",
-        "previous": "3.9%"
+        "forecast": "3.1%",
+        "previous": "3.2%"
     },
     {
-        "title": "Prelim UoM Consumer Sentiment",
+        "title": "30-y Bond Auction",
         "country": "USD",
-        "date": "2023-12-08T10:00:00-05:00",
-        "impact": "High",
-        "forecast": "62.0",
-        "previous": "60.4"
-    },
-    {
-        "title": "Prelim UoM Inflation Expectations",
-        "country": "USD",
-        "date": "2023-12-08T10:00:00-05:00",
+        "date": "2023-12-12T13:01:00-05:00",
         "impact": "Medium",
         "forecast": "",
-        "previous": "4.4%"
+        "previous": "4.77|2.2"
+    },
+    {
+        "title": "Federal Budget Balance",
+        "country": "USD",
+        "date": "2023-12-12T14:00:00-05:00",
+        "impact": "Low",
+        "forecast": "-290.5B",
+        "previous": "-66.6B"
+    },
+    {
+        "title": "Core PPI m/m",
+        "country": "USD",
+        "date": "2023-12-13T08:30:00-05:00",
+        "impact": "High",
+        "forecast": "0.2%",
+        "previous": "0.0%"
+    },
+    {
+        "title": "PPI m/m",
+        "country": "USD",
+        "date": "2023-12-13T08:30:00-05:00",
+        "impact": "High",
+        "forecast": "0.1%",
+        "previous": "-0.5%"
+    },
+    {
+        "title": "Crude Oil Inventories",
+        "country": "USD",
+        "date": "2023-12-13T10:30:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": "-4.6M"
+    },
+    {
+        "title": "Federal Funds Rate",
+        "country": "USD",
+        "date": "2023-12-13T14:00:00-05:00",
+        "impact": "High",
+        "forecast": "5.50%",
+        "previous": "5.50%"
+    },
+    {
+        "title": "FOMC Economic Projections",
+        "country": "USD",
+        "date": "2023-12-13T14:00:00-05:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "FOMC Statement",
+        "country": "USD",
+        "date": "2023-12-13T14:00:00-05:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "FOMC Press Conference",
+        "country": "USD",
+        "date": "2023-12-13T14:30:00-05:00",
+        "impact": "High",
+        "forecast": "",
+        "previous": ""
+    },
+    {
+        "title": "Core Retail Sales m/m",
+        "country": "USD",
+        "date": "2023-12-14T08:30:00-05:00",
+        "impact": "High",
+        "forecast": "-0.1%",
+        "previous": "0.1%"
+    },
+    {
+        "title": "Retail Sales m/m",
+        "country": "USD",
+        "date": "2023-12-14T08:30:00-05:00",
+        "impact": "High",
+        "forecast": "-0.1%",
+        "previous": "-0.1%"
+    },
+    {
+        "title": "Unemployment Claims",
+        "country": "USD",
+        "date": "2023-12-14T08:30:00-05:00",
+        "impact": "High",
+        "forecast": "223K",
+        "previous": "220K"
+    },
+    {
+        "title": "Import Prices m/m",
+        "country": "USD",
+        "date": "2023-12-14T08:30:00-05:00",
+        "impact": "Low",
+        "forecast": "-0.7%",
+        "previous": "-0.8%"
+    },
+    {
+        "title": "Business Inventories m/m",
+        "country": "USD",
+        "date": "2023-12-14T10:00:00-05:00",
+        "impact": "Low",
+        "forecast": "0.0%",
+        "previous": "0.4%"
+    },
+    {
+        "title": "Natural Gas Storage",
+        "country": "USD",
+        "date": "2023-12-14T10:30:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": "-117B"
+    },
+    {
+        "title": "Empire State Manufacturing Index",
+        "country": "USD",
+        "date": "2023-12-15T08:30:00-05:00",
+        "impact": "High",
+        "forecast": "1.7",
+        "previous": "9.1"
+    },
+    {
+        "title": "Industrial Production m/m",
+        "country": "USD",
+        "date": "2023-12-15T09:15:00-05:00",
+        "impact": "Medium",
+        "forecast": "0.3%",
+        "previous": "-0.6%"
+    },
+    {
+        "title": "Capacity Utilization Rate",
+        "country": "USD",
+        "date": "2023-12-15T09:15:00-05:00",
+        "impact": "Low",
+        "forecast": "79.1%",
+        "previous": "78.9%"
+    },
+    {
+        "title": "Flash Manufacturing PMI",
+        "country": "USD",
+        "date": "2023-12-15T09:45:00-05:00",
+        "impact": "High",
+        "forecast": "49.3",
+        "previous": "49.4"
+    },
+    {
+        "title": "Flash Services PMI",
+        "country": "USD",
+        "date": "2023-12-15T09:45:00-05:00",
+        "impact": "High",
+        "forecast": "50.5",
+        "previous": "50.8"
+    },
+    {
+        "title": "TIC Long-Term Purchases",
+        "country": "USD",
+        "date": "2023-12-15T16:00:00-05:00",
+        "impact": "Low",
+        "forecast": "",
+        "previous": "-1.7B"
     }
 ]

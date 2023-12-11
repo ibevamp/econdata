@@ -54,11 +54,12 @@ def send_single(event):
     }
     
     for name, value in webhook_urls.items():
-        response = requests.post(value, json=payload)
-        if response.status_code == 204:
-            print(f"Notification sent successfully to {name}.")
-        else:
-            print(f"Failed to send notification to {name}: {response.status_code}")
+        if value is not None:
+            response = requests.post(value, json=payload)
+            if response.status_code == 204:
+                print(f"Notification sent successfully to {name}.")
+            else:
+                print(f"Failed to send notification to {name}: {response.status_code}")
     
 def send_full(events, timeframe):
     now = datetime.datetime.now()
@@ -105,8 +106,9 @@ def send_full(events, timeframe):
     }
     
     for name, value in webhook_urls.items():
-        response = requests.post(value, json=payload)
-        if response.status_code == 204:
-            print(f"Notification sent successfully to {name}.")
-        else:
-            print(f"Failed to send notification to {name}: {response.status_code}")
+        if value is not None:
+            response = requests.post(value, json=payload)
+            if response.status_code == 204:
+                print(f"Notification sent successfully to {name}.")
+            else:
+                print(f"Failed to send notification to {name}: {response.status_code}")
