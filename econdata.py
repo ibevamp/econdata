@@ -87,7 +87,7 @@ def main():
         while True:
             schedule.run_pending()
             print(f"Timestamp: {datetime.datetime.now()}")
-            time.sleep(1)  # Adjust the sleep time as needed
+            time.sleep(30)  # Adjust the sleep time as needed
     except (KeyboardInterrupt, SystemExit):
         scheduler.shutdown(wait=False)
 
