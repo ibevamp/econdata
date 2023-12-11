@@ -1,9 +1,9 @@
 from dateutil import parser
 from datetime import datetime
+from dotenv import load_dotenv
 from discord import *
 from helper import *
-from freezegun import freeze_time
-
+from apscheduler.schedulers.background import BackgroundScheduler
 
 import requests
 import schedule
@@ -13,7 +13,8 @@ import pytz
 import os
 import json
 
-from apscheduler.schedulers.background import BackgroundScheduler
+load_dotenv()
+url = os.getenv("url")
 
 # Initialize APScheduler
 scheduler = BackgroundScheduler()
@@ -37,7 +38,6 @@ def clear_schedule():
 
 def fetch_and_save_data():
     print("Retreiving data  ... ")
-    url = "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
     file_path = 'events_data.json'
     
     response = requests.get(url)
@@ -66,26 +66,28 @@ def schedule_news(events):
 
 def schedule_daily_tasks(events):
     # Schedule daily tasks
-    scheduler.add_job(send_full, 'cron', day_of_week='mon-sun', hour=17, minute=25, second=5, args=[events, "Day"])
+    scheduler.add_job(send_full, 'cron', day_of_week='mon-sun', hour=6, minute=00, second=0, args=[events, "Day"])
 
 def schedule_weekly_tasks(events):
     # Schedule weekly task
-    scheduler.add_job(fetch_and_save_data, 'cron', day_of_week='sun', hour=17, minute=24, second=0)
+    scheduler.add_job(fetch_and_save_data, 'cron', day_of_week='sun', hour=19, minute=00, second=0)
 
 def main():
     json_file_path = 'events_data.json'
     events = load_data(json_file_path)
+
     schedule_weekly_tasks(events)
     schedule_daily_tasks(events)
     schedule_news(events)
+    
     print_events_for_today(events)
     print_scheduled_jobs()
     try:
         # Keep the script running
         while True:
             schedule.run_pending()
-            # print(f"Timestamp: {datetime.datetime.now()}")
-            # time.sleep(1)  # Adjust the sleep time as needed
+            print(f"Timestamp: {datetime.datetime.now()}")
+            time.sleep(1)  # Adjust the sleep time as needed
     except (KeyboardInterrupt, SystemExit):
         scheduler.shutdown(wait=False)
 
