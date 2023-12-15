@@ -11,7 +11,8 @@ load_dotenv()
 
 webhook_urls = {
     "VAMP": os.getenv("VAMP"),
-    "NWG": os.getenv("NWG")
+    "NWG": os.getenv("NWG"),
+    "IZZY": os.getenv("IZZY")
     }
 
 #Day suffix ie. Thursday the 5th

@@ -59,14 +59,14 @@ def load_data(file_path):
 def schedule_news(events):
     for event in events:
         event_time = parser.parse(event['date'])
-        reminder_time = event_time - datetime.timedelta(minutes=0)  # 5 minutes before the event
+        reminder_time = event_time - datetime.timedelta(minutes=5)  # 5 minutes before the event
 
         # Schedule each event
         scheduler.add_job(send_single, 'date', run_date=reminder_time, args=[event])
 
 def schedule_daily_tasks(events):
     # Schedule daily tasks
-    scheduler.add_job(send_full, 'cron', day_of_week='mon-sun', hour=6, minute=00, second=0, args=[events, "Day"])
+    scheduler.add_job(send_full, 'cron', day_of_week='mon-sun', hour=6, minute=0, second=0, args=[events, "Day"])
 
 def schedule_weekly_tasks(events):
     # Schedule weekly task
